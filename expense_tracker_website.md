@@ -1,9 +1,10 @@
-Here’s a ready-to-deploy **website version** of your Expense Tracker app using React. You can directly host it via GitHub Pages, Netlify, or Vercel.
-
----
-
-### **Folder Structure**
-```
+npm install --save gh-pages
+"homepage": "https://<username>.github.io/<repo-name>",
+"scripts": {
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+}
+npm run deploy
 expense-tracker-website/
 │
 ├─ package.json
@@ -16,12 +17,6 @@ expense-tracker-website/
     ├─ index.js           <-- React entry point
     ├─ index.css          <-- Basic styling
     └─ components/       <-- Optional: Card, Button, Input components if used
-```
-
----
-
-### **1. public/index.html**
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,12 +28,6 @@ expense-tracker-website/
   <div id="root"></div>
 </body>
 </html>
-```
-
----
-
-### **2. src/index.js**
-```javascript
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -50,23 +39,11 @@ root.render(
     <App />
   </React.StrictMode>
 );
-```
-
----
-
-### **3. src/index.css**
-```css
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f3f4f6;
 }
-```
-
----
-
-### **4. package.json dependencies**
-```json
 {
   "name": "expense-tracker-website",
   "version": "1.0.0",
